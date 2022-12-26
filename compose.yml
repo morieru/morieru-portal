@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  app:
+    image: morieru-portal
+    container_name: morieru-portal
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # volumes:
+    #   - .:/app
+    ports:
+      - 11080:3000
+    restart: always
