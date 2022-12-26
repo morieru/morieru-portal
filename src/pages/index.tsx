@@ -67,6 +67,7 @@ const RandomMorieru = (props: IndexPageProps) => {
 const IndexPage: NextPage<IndexPageProps> = ({ initialImage }) => {
   const head_title = 'もりえるポータル'
   const head_description = '「もりえる」という不思議なインターネットミームに関するポータルサイト'
+  const logo_url = 'https://morieru.pirocot.com/logo.png'
   return (
     <div className='container-fluid p-0'>
       {/* <header>&nbsp;</header> */}
@@ -79,7 +80,12 @@ const IndexPage: NextPage<IndexPageProps> = ({ initialImage }) => {
           <meta property='og:type' content='website' />
           <meta property='og:title' content={head_title} />
           <meta property='og:description' content={head_description} />
+          <meta property='og:image' content={logo_url} />
           <meta property='og:locale' content='ja_JP' />
+          <meta name='twitter:card' content='summary' />
+          <meta name='twitter:title' content={head_title} />
+          <meta name='twitter:description' content={head_description} />
+          <meta name='twitter:image' content={logo_url} />
         </Head>
 
         <main className='w-100 text-center'>
